@@ -14,7 +14,7 @@ return {
 		-- Find files in project
 		vim.keymap.set('n', '<leader>pf', '<cmd> Telescope find_files<cr>')
 		-- Find git files
-		vim.keymap.set('n', '<leader>pg', '<cmd> Telescope git_files<cr>') 
+		vim.keymap.set('n', '<leader>pg', '<cmd> Telescope git_files<cr>')
 		-- Live grep
 		vim.keymap.set('n', '<leader>pl', '<cmd> Telescope live_grep<cr>')
 	end
