@@ -17,6 +17,7 @@ return {
 			ensure_installed = {
 				'lua_ls',
 				'clangd',
+				'bashls',
 			},
 			handlers = {
 				function(server_name)
