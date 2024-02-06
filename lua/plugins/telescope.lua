@@ -17,5 +17,7 @@ return {
 		vim.keymap.set('n', '<leader>pg', '<cmd> Telescope git_files<cr>')
 		-- Live grep
 		vim.keymap.set('n', '<leader>pl', '<cmd> Telescope live_grep<cr>')
+        -- Buffers
+        vim.keymap.set('n', '<leader>pb', '<cmd> Telescope buffers<cr>')
 	end
 }
