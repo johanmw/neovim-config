@@ -21,11 +21,11 @@ return {
 			},
 			handlers = {
 				function(server_name)
-					require("lspconfig")[server_name].setup{}
+          vim.lsp.config("lspconfig")[server_name].setup{}
 				end,
 				['lua_ls'] = function()
 					-- No keymapping for lua for now needs fixing.
-					require('lspconfig').lua_ls.setup{
+          vim.lsp.config('lspconfig').lua_ls.setup{
 
 						on_init = function(client)
 							local path = client.workspace_folders[1].name
@@ -56,7 +56,7 @@ return {
 							end
 							return true
 						end
-					}
+				  }
 				end
 			}
 		}
@@ -114,9 +114,11 @@ return {
 		-- Set up lspconfig.
 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 		-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-		require('lspconfig')['clangd'].setup {
+    --vim.lsp.config('lspconfig')['clangd'].setup {
+    --0vim.lsp.config['clangd'].setup {
+    vim.lsp.config('clangd', {
 			capabilities = capabilities
-		}
+		})
 --	require('lspconfig')['lua_ls'].setup {
 --		capabilities = capabilities
 --	}
